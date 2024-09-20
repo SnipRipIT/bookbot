@@ -17,6 +17,8 @@ def main():
     letter_list = dict(sorted(letter_count.items()))
 
     for letter, count in letter_count.items():
+        if not letter.isalpha(): 
+            continue # Skip non-alpha characters.
         print(f"The {letter} character was found {count} times.")
 
 main()
